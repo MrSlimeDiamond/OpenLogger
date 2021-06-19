@@ -6,7 +6,7 @@ Just copy paste the `Log.java` file from `src/main/java/Log.java` somewhere in y
 ```java
 import org.example.myproject.utils.Log;
 public class Main {
-  public static void Main() {
+  public static void main(final String[] args) {
     Log.info("This is very important info that I must tell you.");
     Log.warn("Just warning you about something");
     Log.error("Something went wrong!");
