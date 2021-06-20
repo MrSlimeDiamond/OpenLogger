@@ -1,4 +1,4 @@
-package me.slimediamond.openlogger;
+package com.github.mrslimediamond.openlogger;
 
 public class Log {
     /* Colours and stuff */
