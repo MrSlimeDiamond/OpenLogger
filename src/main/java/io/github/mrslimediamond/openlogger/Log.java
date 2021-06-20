@@ -1,4 +1,4 @@
-package com.github.mrslimediamond.openlogger;
+package io.github.mrslimediamond.openlogger;
 
 public class Log {
     /* Colours and stuff */

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.mrslimediamond</groupId>
+    <groupId>io.github.mrslimediamond</groupId>
     <artifactId>OpenLogger</artifactId>
     <version>1.0.0</version>
 
@@ -30,7 +30,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.github.mrslimediamond.openlogger.Log</mainClass>
+                            <mainClass>io.github.mrslimediamond.openlogger.Log</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
