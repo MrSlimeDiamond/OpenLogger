@@ -20,6 +20,7 @@ implementation 'io.github.mrslimediamond:OpenLogger:1.0.0'
 ### Import and use
 ```java
 import io.github.mrslimediamond.openlogger.Log;
+
 public class Main {
   public static void main(final String[] args) {
     Log.info("This is very important info that I must tell you.");
