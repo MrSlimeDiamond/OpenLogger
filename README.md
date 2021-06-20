@@ -14,7 +14,7 @@ Maven:
 </dependency>
 ```
 Gradle:
-```xml
+```gradle
 implementation 'io.github.mrslimediamond:OpenLogger:1.0.0'
 ```
 ### Import and use
