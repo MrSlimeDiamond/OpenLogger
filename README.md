@@ -13,9 +13,13 @@ Maven:
   <version>1.0.0</version>
 </dependency>
 ```
-Gradle:
+Gradle (Groovy):
 ```gradle
 implementation 'io.github.mrslimediamond:OpenLogger:1.0.0'
+```
+Gradle (Kotlin):
+```kts
+implementation("io.github.mrslimediamond:OpenLogger:1.0.0")
 ```
 ### Import and use
 ```java
