@@ -11,7 +11,13 @@ import static io.github.mrslimediamond.openlogger.CallerClassName.*;
 public class OpenLogger {
 
     private static Map<String, Log> packages = new HashMap<>();
-    private static final Log DEFAULT_LOG = new Log();
+    private static final ThreadLocal<Log> DEFAULT_LOG = new ThreadLocal<Log>() {
+
+        @Override
+        protected Log initialValue() {
+            return new Log();
+        }
+    };
 
     public static void info(Object in) {
         getDefaultLog().info(in);
@@ -35,7 +41,7 @@ public class OpenLogger {
             }
         }
 
-        return DEFAULT_LOG;
+        return DEFAULT_LOG.get();
     }
 
     /**

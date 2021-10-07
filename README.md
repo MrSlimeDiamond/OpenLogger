@@ -65,6 +65,8 @@ You can also set a package instance:
 OpenLogger.setDefaultLog("cool.app", new Logger((level, caller, in) -> "Fish cakes!!!"));
 OpenLogger.info("An extremely important message will follow."); // [Main/INFO] Fish cakes!!!
 ```
+This is not thread safe.
+
 ![image](https://user-images.githubusercontent.com/43764702/122656419-5ecdea80-d1ae-11eb-8ccb-ab51e5ce9980.png)
 ## Issues
 Report issues on the official [issue tracker](https://github.com/MrSlimeDiamond/OpenLogger/issues)
