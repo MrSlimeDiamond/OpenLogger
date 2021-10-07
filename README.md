@@ -3,8 +3,8 @@
 
 Basic logging system for Java
 ## Usage
-### Lazy People
-Just copy paste the `Log.java` file from `src/main/java/Log.java` somewhere in your path
+### For Lazy People
+Just copy paste everything in `src/main/java` to your project (including <a href="LICENSE">the license</a>).
 ### Maven or Gradle
 Maven:
 ```xml
@@ -51,17 +51,17 @@ public class Main {
 }
 ```
 To change the format, you can just pass in an argument:
-```
+```java
 Log log = new Log((level, caller, in) -> level + ": " + in); // LEVEL: message
 ```
 The log level can also be changed, allowing to customize verbosity:
-```
+```java
 Log log = new Log(LogLevel.valueOf(LogLevel.WARN));
 ```
 This will only show messages that are warnings or less verbose (e.g. errors).
 
 You can also set a package instance:
-```
+```java
 OpenLogger.setDefaultLog("cool.app", new Logger((level, caller, in) -> "Fish cakes!!!"));
 OpenLogger.info("An extremely important message will follow."); // [Main/INFO] Fish cakes!!!
 ```
