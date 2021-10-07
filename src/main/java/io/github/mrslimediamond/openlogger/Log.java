@@ -35,7 +35,6 @@ public class Log {
 
     /**
      * Creates a new log with defaults.
-
      */
     public Log() {
         this(LogFormatter.DEFAULT, LogLevel.DEBUG);
