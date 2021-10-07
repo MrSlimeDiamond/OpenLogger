@@ -64,7 +64,7 @@ public class OpenLogger {
     }
 
     private OpenLogger() {
-        throw new UnsupportedOperationException("LogConstants cannot be initialized.");
+        throw new UnsupportedOperationException("OpenLogger cannot be initialized.");
     }
 
 }
