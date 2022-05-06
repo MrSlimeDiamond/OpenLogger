@@ -3,7 +3,8 @@
 
 Basic logging system for Java
 ## Usage
-Just copy paste the `Log.java` file from `src/main/java/Log.java` somewhere in your path
+### For Lazy People
+Just copy paste everything in `src/main/java` to your project (including <a href="LICENSE">the license</a>).
 ### Maven or Gradle
 Maven:
 ```xml
@@ -23,14 +24,16 @@ implementation("io.github.mrslimediamond:OpenLogger:1.0.0")
 ```
 ### Import and use
 ```java
-import io.github.mrslimediamond.openlogger.Log;
+import io.github.mrslimediamond.openlogger.OpenLogger;
 
 public class Main {
+
   public static void main(final String[] args) {
-    Log.info("This is very important info that I must tell you.");
-    Log.warn("Just warning you about something");
-    Log.error("Something went wrong!");
+    OpenLogger.info("This is very important info that I must tell you.");
+    OpenLogger.warn("Just warning you about something");
+    OpenLogger.error("Something went wrong!");
   }
+
 }
 ```
 Alternatively, you can use it like this:
@@ -38,12 +41,32 @@ Alternatively, you can use it like this:
 import io.github.mrslimediamond.openlogger.Log;
 
 public class Main {
-    static Log c = new Log();
-    public static void main(final String[] args) {
-        c.info("Stuff");
-    }
+
+  static Log c = new Log();
+
+  public static void main(final String[] args) {
+    c.info("Stuff");
+  }
+
 }
 ```
+To change the format, you can just pass in an argument:
+```java
+Log log = new Log((level, caller, in) -> level + ": " + in); // LEVEL: message
+```
+The log level can also be changed, allowing to customize verbosity:
+```java
+Log log = new Log(LogLevel.valueOf(LogLevel.WARN));
+```
+This will only show messages that are warnings or less verbose (e.g. errors).
+
+You can also set a package instance:
+```java
+OpenLogger.setDefaultLog("cool.app", new Logger((level, caller, in) -> "Fish cakes!!!"));
+OpenLogger.info("An extremely important message will follow."); // [Main/INFO] Fish cakes!!!
+```
+This is not thread safe.
+
 ![image](https://user-images.githubusercontent.com/43764702/122656419-5ecdea80-d1ae-11eb-8ccb-ab51e5ce9980.png)
 ## Issues
 Report issues on the official [issue tracker](https://github.com/MrSlimeDiamond/OpenLogger/issues)
